@@ -46,6 +46,12 @@
 
     <!-- Crezione pagina -->
     <div class="row">
+        <div class="col-md-12">
+          <div><h1>Layout</h1></div>
+          <hr>
+        <div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
             <h3>Template di base</h3>
             <p>Un template &egrave; un file di riferimento da cui partire per realizzare qualcosa, ad esempio un sito web.</p>
@@ -103,10 +109,28 @@
             </code></pre>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Elementi</h3>
+            <p>Gli elementi che compongono una pagina sono identificati da un tag di inizio e di fine. Ad esempio:</p>
+            <ul>
+              <li><code>&lt;body&gt;&lt;/body&gt;</code> definisce il contenuto dell'intera pagina.</li>
+              <li><code>&lt;div&gt;&lt;/div&gt;</code> definisce un contenitore all'interno della pagina.</li>
+              <li><code>&lt;p&gt;&lt;/p&gt;</code> definisce un paragrafo che contiene del testo</li>
+              <li><code>&lt;h1&gt;&lt;/h1&gt;</code> definisce un titolo.</li>
+            </ul>
+            <p>Un elemento può avere dei valori, ad esempio:</p>
+            <ul>
+              <li>una classe, <code>&lt;div class="contenitore-1"&gt;</code>,</li>
+              <li>un id, o identificativo univoco, <code>&lt;p id="paragrafo-1"&gt;</code>.</li>
+            </ul>
+            <p>Un elemento può avere sia classe che id.</p>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-6">
-            <h3>Layout della pagina</h3>
+            <h3>Righe</h3>
             <p>La libreria Bootstrap permette di impostare il layout della pagina, ovvero la disposizione degli
                 elementi, secondo un sistema a colonne, chiamato 'grid'.</p>
             <p>Per farlo, come prima cosa, bisogna inserire all'interno del body un elemento<code>div</code>, ovvero un
@@ -242,6 +266,10 @@
             </button>
             <p>&nbsp;</p>
             <p><span class="label label-danger">NOTA BENE:</span> un <code>Navbar</code> pu&ograve; essere personalizzata in tanti modi: pu&ograve; rimanere sempre fissa in cima alla pagina, pu&grave; muoversi con il contenuto della pagina, pu&ograve; avere un'immagine al posto del titolo, ecc. Qui si riporta un esempio semplice ma completo: potete trovare maggiori informazioni e dettagli alla pagina <a href="https://getbootstrap.com/docs/3.3/components/#navbar">Navbar - Bootstrap</a>.</p>
+            <br>
+            <h4>Elementi di una navbar</h4>
+            <p>Gli elementi più comune di una navbar sono i <code>link di navigazione</code>, che permettono agli utenti di navigare tra le pagine di un sito.</p>
+            <p>Un link è delimitato dal tag <code>&lt;a&gt;&lt;/a&gt;</code> e deve avere un campo <code>href=' '</code> il cui valore deve corrisponder alla url della pagina a cui quel link deve portate.</p>
         </div>
         <div class="col-md-6">
             <br>
@@ -344,7 +372,62 @@
             </code></pre>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+          <div><h1>Stile</h1></div>
+          <hr>
+        <div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Foglio di stile</h3>
+            <p>Un foglio di stile &egrave; un file di testo con estensione <code>.css</code> che contiene tutte le regole grafiche e di stile di un sito.</p>
+            <p>Le regole di stile da applicare ad un elemento vengono definite secondo il seguente formato:</p>
+            <ol>
+              <li>una parola che identifica l'elemento per cui valgono quelle regole</li>
+              <li>le regole, delimitate da parentesi graffe</li>
+              <li>per ogni regola, la parola che la identifica <code>:</code> valore che vogliamo assegnare <code>;</code></li>
+              <li> eventuali commenti, delimitati da <code>/* commento */</code>
+            </ol>
+            <p>Si possono applicare delle regole di stile:</p>
+            <ul>
+              <li>all'intera pagina,</li>
+              <li>a tutti gli elementi con lo stesso tag,</li>
+              <li>a tutti gli elementi con la stessa classe,</li>
+              <li>all'elemento con l'id specificato.</li>
+            </ul>
+            <p><span class="label label-danger">NOTA BENE:</span> l'id &egrave un identificatore univoco e per nessun motivo deve essere duplicato all'interno della pagina. Deve essere assegnato ad un solo elemento.</p>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <pre><code class="css">
+...
+/* regole applicate di base a tutta la pagina */
+body { /* il formato &egrave; regola: valore; */
+  color: #4f4f4f;             /* colore del testo */
+  background-color: #3c3c3c;  /* colore dello sfondo */
+}
 
+/* regole applicate a tutti i div e p */
+div, p {
+  font-size: 12px;
+}
+
+/* regole applicate a tutti gli elementi con la stessa classe */
+.classe-base{
+  color: #gggggg;
+  background-color: #111111;
+}
+
+/* regole applciate al solo elemento con l'id specificato */
+#identificativo-univoco{
+  color: #bbbbbb;
+  background-color: #l3l3l3;
+}
+...
+            </code></pre>
+        </div>
+    </div>
 </div>
 <br>
 </body>
