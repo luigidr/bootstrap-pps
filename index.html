@@ -269,7 +269,7 @@
             <br>
             <h4>Elementi di una navbar</h4>
             <p>Gli elementi più comune di una navbar sono i <code>link di navigazione</code>, che permettono agli utenti di navigare tra le pagine di un sito.</p>
-            <p>Un link è delimitato dal tag <code>&lt;a&gt;&lt;/a&gt;</code> e deve avere un campo <code>href=' '</code> il cui valore deve corrisponder alla url della pagina a cui quel link deve portate.</p>
+            <p>Un link è delimitato dal tag <code>&lt;a&gt;&lt;/a&gt;</code> e deve avere un campo <code>href=' '</code> il cui valore deve corrispondere alla url della pagina a cui quel link deve portate.</p>
         </div>
         <div class="col-md-6">
             <br>
@@ -469,6 +469,98 @@ div, p {
         <div class="col-md-6" style="margin-left: 25%; margin-top: 20px; border-width: 4px; border-color: #000000; border-style: solid; border-radius: 5px;">
           <h4>Questo è un div o contenitore che segue le regole css della classe <code>contenitore-1</code>.</h4>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+        <h3>Colori</h3>
+        <p> In CSS &egrave; possibile specificare il colore di diversi elementi, come ad esempio il testo, lo sfondo o i bordi.</p>
+        </div>
+        <div class="col-md-6">
+        <br>
+        <pre><code class="css">
+...
+div{
+  ...
+  color: #A64C38;             /* colore del testo */
+  background-color: #C7D9D9;  /* colore sfondo    */
+  border-color: #115D8C;      /* colore bordo */
+  ...
+}
+...
+        </code></pre>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6" style="margin-left: 25%; margin-top: 20px; border-width: 4px; border-color: #115D8C; border-style: solid; border-radius: 5px; color: #A64C38; background-color: #C7D9D9;">
+          <h4>Questo è un div colorato secondo le regole della classe div</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        <h3>Font</h3>
+        <p> &Egrave; possibile specificare il font utilizzato per il testo di un qualsiasi elemento della pagine e la sua dimensione.</p>
+        </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+      <br>
+      <pre><code class="css">
+...
+h1{
+  font-family: Verdana;   /* stile */
+  font-size: 75px;        /* dimensione */
+}
+...
+      </code></pre>
+      </div>
+        <div class="col-md-6">
+          <div><h1 style="font-size: 75px; font-family: Verdana; text-align: center;">Esempio di titolo h1</h1></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <p>I browser web mettono a disposizione alcuni font di default ma per usare font particolari &egrave; necessario aggiungere il file corrispondente nella cartella del sito e caricarlo nel file css con il codice mostrato nell'esempio a fianco.</p>
+        <p><span class="label label-danger">NOTA BENE:</span> i font che si scaricano dal web posso essere in diversi formati, non tutti compatibili con tutti i browser.</p>
+      </div>
+      <div class="col-md-6">
+        <pre><code class="css">
+...
+
+/* import di un font da google fonts */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+/* import di un font caricato nella cartella del sito */
+@font-face {
+  font-family: "Kingthings_Gothique";   /* nome da usare */
+  src: url("Kingthings_Gothique.ttf");  /* percorso del file */
+}
+
+h1{
+  font-family: Kingthings_Gotique;
+}
+...
+</code></pre>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+          <div><h1>Riferimenti utili</h1></div>
+          <hr>
+        <div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h4><a href="https://www.w3schools.com/html/default.asp">Documentazione generica HTML</a></h4>
+        <h4><a href="https://www.w3schools.com/css/default.asp">Documentazione generica CSS</a></h4>
+        <h4><a href="https://getbootstrap.com/docs/3.3/components/">Documentazione Bootstrap Elementi</a></h4>
+        <h4><a href="https://getbootstrap.com/docs/3.3/css/">Documentazione Bootstrap Stile</a></h4>
+        <h4><a href="https://color.adobe.com/it/explore/?filter=most-popular&time=month">Scelta colori/temi</a></h4>
+        <br>
+      </div>
     </div>
 </div>
 <br>
