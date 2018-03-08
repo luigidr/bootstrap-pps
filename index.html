@@ -396,7 +396,7 @@
               <li>a tutti gli elementi con la stessa classe,</li>
               <li>all'elemento con l'id specificato.</li>
             </ul>
-            <p><span class="label label-danger">NOTA BENE:</span> l'id &egrave un identificatore univoco e per nessun motivo deve essere duplicato all'interno della pagina. Deve essere assegnato ad un solo elemento.</p>
+            <p><span class="label label-danger">NOTA BENE:</span> l'id &egrave; un identificatore univoco e per nessun motivo deve essere duplicato all'interno della pagina. Deve essere assegnato ad un solo elemento.</p>
         </div>
         <div class="col-md-6">
             <br>
@@ -426,6 +426,48 @@ div, p {
 }
 ...
             </code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+        <h3>Stile di un contenitore</h3>
+         <p>Lo stile dei contenitori &egrave; molto importante per definire il layout e l'aspetto generale del sito. Tra le varie regole, sicuramente vanno considerate:</p>
+         <ul>
+           <li>il <code>margin</code>, ovvero la distanza di quell'elemento dagli altri; &egrave; possibile distanziare il contenitore rispetto alle 4 direzioni;</li>
+           <li>il <code>border</code>, ovvero il bordo del contenitore, che pu&ograve; avere colore, spessore, stile (continuo, puntini, ecc.), bordo arrotondato;</li>
+           <li>il <code>padding</code>, ovvero la distanza del contenuto dal bordo;</li>
+         </ul>
+         <p><span class="label label-danger">NOTA BENE:</span> quando si indica un valore numeirco &egrave; sempre necessario specificare l'unit&agrave; di misura; la più comune &egrave; il pixel, e viene indicata come <code>px</code>; non devono essere presenti spazi tra valore numerico e unit&agrave; di misura (es. <code>30px</code>). In altri casi si può usare <code>%</code> come unit&agrave; di misura, per un valore compreso da 0 e 100, che indicher&agrave; un valore percentuale rispetto alla larghezza della pagina.</p>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <pre><code class="css">
+...
+.contenitore-1{
+  margin-left: 25%;       /* distanza da sinistra */
+  /* pari al 25% della larghezza totale della pagina */
+
+  margin-top: 20px;         /* distanza dall'alto */
+
+  /* se non viene specificato lo spessore,
+  il bordo non &egrave; visibile */
+  border-width: 4px;        /* spessore bordo */
+  border-color: #000000;    /* colore bordo */
+  border-style: solid;      /* stile del bordo */
+                            /* solid corrisponde a linea piena */
+  border-radius: 5px;       /* bordo arrotondato */
+  padding-top: 35px;        /* distanza del contenuto dal bordo superiore */
+  padding-left: 20px;        /* distanza del contenuto dal bordo superiore */
+}
+...
+          </code></pre>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6" style="margin-left: 25%; margin-top: 20px; border-width: 4px; border-color: #000000; border-style: solid; border-radius: 5px;">
+          <h4>Questo è un div o contenitore che segue le regole css della classe <code>contenitore-1</code>.</h4>
         </div>
     </div>
 </div>
