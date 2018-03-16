@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Reference Guide</title>
+    <title>Web Reference Guide</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -21,25 +21,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <style>
-        .show-grid{
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
-            background-color: #eee;
-            background-color: rgba(86,61,124,.15);
-            border: 1px solid #ddd;
-            border: 1px solid rgba(86,61,124,.2);
-        }
-
-        .distanced{
-            margin:5px;
-        }
-    </style>
+    <link rel ="stylesheet" href="css/custom.css">
 </head>
 
 <body>
-<div class="container">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Guida base a Bootstrap</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+          <li><a href="css-base.html">CSS di base</a></li>
+          <li><a href="references.html">Riferimenti utili</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
     <div class="jumbotron">
         <h1>Guida base a Bootstrap</h1>
     </div>
@@ -47,9 +58,9 @@
     <!-- Crezione pagina -->
     <div class="row">
         <div class="col-md-12">
-          <div><h1>Layout</h1></div>
+          <h1>Layout</h1>
           <hr>
-        <div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -372,197 +383,14 @@
             </code></pre>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-          <div><h1>Stile</h1></div>
-          <hr>
-        <div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Foglio di stile</h3>
-            <p>Un foglio di stile &egrave; un file di testo con estensione <code>.css</code> che contiene tutte le regole grafiche e di stile di un sito.</p>
-            <p>Le regole di stile da applicare ad un elemento vengono definite secondo il seguente formato:</p>
-            <ol>
-              <li>una parola che identifica l'elemento per cui valgono quelle regole</li>
-              <li>le regole, delimitate da parentesi graffe</li>
-              <li>per ogni regola, la parola che la identifica <code>:</code> valore che vogliamo assegnare <code>;</code></li>
-              <li> eventuali commenti, delimitati da <code>/* commento */</code>
-            </ol>
-            <p>Si possono applicare delle regole di stile:</p>
-            <ul>
-              <li>all'intera pagina,</li>
-              <li>a tutti gli elementi con lo stesso tag,</li>
-              <li>a tutti gli elementi con la stessa classe,</li>
-              <li>all'elemento con l'id specificato.</li>
-            </ul>
-            <p><span class="label label-danger">NOTA BENE:</span> l'id &egrave; un identificatore univoco e per nessun motivo deve essere duplicato all'interno della pagina. Deve essere assegnato ad un solo elemento.</p>
-        </div>
-        <div class="col-md-6">
-            <br>
-            <pre><code class="css">
-...
-/* regole applicate di base a tutta la pagina */
-body { /* il formato &egrave; regola: valore; */
-  color: #4f4f4f;             /* colore del testo */
-  background-color: #3c3c3c;  /* colore dello sfondo */
-}
 
-/* regole applicate a tutti i div e p */
-div, p {
-  font-size: 12px;
-}
-
-/* regole applicate a tutti gli elementi con la stessa classe */
-.classe-base{
-  color: #gggggg;
-  background-color: #111111;
-}
-
-/* regole applciate al solo elemento con l'id specificato */
-#identificativo-univoco{
-  color: #bbbbbb;
-  background-color: #l3l3l3;
-}
-...
-            </code></pre>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-        <h3>Stile di un contenitore</h3>
-         <p>Lo stile dei contenitori &egrave; molto importante per definire il layout e l'aspetto generale del sito. Tra le varie regole, sicuramente vanno considerate:</p>
-         <ul>
-           <li>il <code>margin</code>, ovvero la distanza di quell'elemento dagli altri; &egrave; possibile distanziare il contenitore rispetto alle 4 direzioni;</li>
-           <li>il <code>border</code>, ovvero il bordo del contenitore, che pu&ograve; avere colore, spessore, stile (continuo, puntini, ecc.), bordo arrotondato;</li>
-           <li>il <code>padding</code>, ovvero la distanza del contenuto dal bordo;</li>
-         </ul>
-         <p><span class="label label-danger">NOTA BENE:</span> quando si indica un valore numeirco &egrave; sempre necessario specificare l'unit&agrave; di misura; la più comune &egrave; il pixel, e viene indicata come <code>px</code>; non devono essere presenti spazi tra valore numerico e unit&agrave; di misura (es. <code>30px</code>). In altri casi si può usare <code>%</code> come unit&agrave; di misura, per un valore compreso da 0 e 100, che indicher&agrave; un valore percentuale rispetto alla larghezza della pagina.</p>
-        </div>
-        <div class="col-md-6">
-          <br>
-          <pre><code class="css">
-...
-.contenitore-1{
-  margin-left: 25%;       /* distanza da sinistra */
-  /* pari al 25% della larghezza totale della pagina */
-
-  margin-top: 20px;         /* distanza dall'alto */
-
-  /* se non viene specificato lo spessore,
-  il bordo non &egrave; visibile */
-  border-width: 4px;        /* spessore bordo */
-  border-color: #000000;    /* colore bordo */
-  border-style: solid;      /* stile del bordo */
-                            /* solid corrisponde a linea piena */
-  border-radius: 5px;       /* bordo arrotondato */
-  padding-top: 35px;        /* distanza del contenuto dal bordo superiore */
-  padding-left: 20px;        /* distanza del contenuto dal bordo superiore */
-}
-...
-          </code></pre>
-        </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-6" style="margin-left: 25%; margin-top: 20px; border-width: 4px; border-color: #000000; border-style: solid; border-radius: 5px;">
-          <h4>Questo è un div o contenitore che segue le regole css della classe <code>contenitore-1</code>.</h4>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-        <h3>Colori</h3>
-        <p> In CSS &egrave; possibile specificare il colore di diversi elementi, come ad esempio il testo, lo sfondo o i bordi.</p>
-        </div>
-        <div class="col-md-6">
-        <br>
-        <pre><code class="css">
-...
-div{
-  ...
-  color: #A64C38;             /* colore del testo */
-  background-color: #C7D9D9;  /* colore sfondo    */
-  border-color: #115D8C;      /* colore bordo */
-  ...
-}
-...
-        </code></pre>
-        </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-6" style="margin-left: 25%; margin-top: 20px; border-width: 4px; border-color: #115D8C; border-style: solid; border-radius: 5px; color: #A64C38; background-color: #C7D9D9;">
-          <h4>Questo è un div colorato secondo le regole della classe div</h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-        <h3>Font</h3>
-        <p> &Egrave; possibile specificare il font utilizzato per il testo di un qualsiasi elemento della pagine e la sua dimensione.</p>
-        </div>
-
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-      <br>
-      <pre><code class="css">
-...
-h1{
-  font-family: Verdana;   /* stile */
-  font-size: 75px;        /* dimensione */
-}
-...
-      </code></pre>
-      </div>
-        <div class="col-md-6">
-          <div><h1 style="font-size: 75px; font-family: Verdana; text-align: center;">Esempio di titolo h1</h1></div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-md-6">
-        <p>I browser web mettono a disposizione alcuni font di default ma per usare font particolari &egrave; necessario aggiungere il file corrispondente nella cartella del sito e caricarlo nel file css con il codice mostrato nell'esempio a fianco.</p>
-        <p><span class="label label-danger">NOTA BENE:</span> i font che si scaricano dal web posso essere in diversi formati, non tutti compatibili con tutti i browser.</p>
-      </div>
-      <div class="col-md-6">
-        <pre><code class="css">
-...
-
-/* import di un font da google fonts */
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
-
-/* import di un font caricato nella cartella del sito */
-@font-face {
-  font-family: "Kingthings_Gothique";   /* nome da usare */
-  src: url("Kingthings_Gothique.ttf");  /* percorso del file */
-}
-
-h1{
-  font-family: Kingthings_Gotique;
-}
-...
-</code></pre>
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-          <div><h1>Riferimenti utili</h1></div>
-          <hr>
-        <div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h4><a href="https://www.w3schools.com/html/default.asp">Documentazione generica HTML</a></h4>
-        <h4><a href="https://www.w3schools.com/css/default.asp">Documentazione generica CSS</a></h4>
-        <h4><a href="https://getbootstrap.com/docs/3.3/components/">Documentazione Bootstrap Elementi</a></h4>
-        <h4><a href="https://getbootstrap.com/docs/3.3/css/">Documentazione Bootstrap Stile</a></h4>
-        <h4><a href="https://color.adobe.com/it/explore/?filter=most-popular&time=month">Scelta colori/temi</a></h4>
-        <br>
-      </div>
-    </div>
 </div>
-<br>
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Realizzato nel 2018 per le classi 4A e 4F del Liceo Scientifico "Galileo Ferraris" di Torino - Progetto PP&S</p>
+  </div>
+</footer>
+
 </body>
 </html>
