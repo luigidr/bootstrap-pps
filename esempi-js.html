@@ -264,6 +264,112 @@ $(document).ready(function(){
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-6">
+        <h3>Ricerca tramite filtro su un elenco di elementi</h3>
+        <p>Una funzionalit&agrave; tipica dei siti web &egrave; la possibilit&agrave; di filtrare tra un elenco di elementi (es. alberghi, film, ristoranti) secondo una parola chiave (es. citt&agrave;, genere).</p>
+        <p>Esempio: ho un elenco di nomi e voglio poter filtrare (quindi ridurre) il numero di risultati visibili, ad esempio selezionando solo le voci dell'elenco che contengono una specifica sequenza di caratteri</p>
+        <p>Nell'esempio proposto, andando a scrivere nel campo input di testo, &egrave; possibile filtrare l'elenco di nomi</p>
+        <p>Il campo <code>onkeyup</code> indica che la funzione <code>myFunction()</code> verrà eseguita nel momento in cui l'utente solleva il dito dal tasto premuto per digitare il carattere. Quindi ad ogni carattere digitato, verr&agrave; eseguita la funzione.</p>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Inserire un nome...">
+        <br>
+        <ul id="myUL">
+          <li><a href="#">Adele</a></li>
+          <li><a href="#">Agnese</a></li>
+          <li><a href="#">Alberto</a></li>
+          <li><a href="#">Alice</a></li>
+
+          <li><a href="#">Barbara</a></li>
+          <li><a href="#">Betty</a></li>
+
+          <li><a href="#">Carlo</a></li>
+          <li><a href="#">Cristiano</a></li>
+          <li><a href="#">Carlotta</a></li>
+          <li><a href="#">Carola</a></li>
+
+          <li><a href="#">Daniele</a></li>
+          <li><a href="#">Donatella</a></li>
+
+          <li><a href="#">Francesco</a></li>
+          <li><a href="#">Maria</a></li>
+          <li><a href="#">Marco</a></li>
+          <li><a href="#">Marta</a></li>
+          <li><a href="#">Matteo</a></li>
+          <li><a href="#">Roberta</a></li>
+          <li><a href="#">Valentina</a></li>
+
+        </ul>
+        <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        </script>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <pre><code class="js">
+...
+&lt;input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."&gt;
+&lt;ul id="myUL"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Adele&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Agnes&lt;/a&gt;&lt;/li&gt;
+
+  &lt;li&gt;&lt;a href="#"&gt;Billy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Bob&lt;/a&gt;&lt;/li&gt;
+
+  &lt;li&gt;&lt;a href="#"&gt;Calvin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Christina&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Cindy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+function myFunction() {
+    // dichiarazione delle variabili
+    var input, filter, ul, li, a, i;
+
+    // il valore da usare per filtrare l'elenco è il testo letto dal campo input
+    input = document.getElementById('myInput');
+
+    // decido di filtrare senza fare distinzione tra maiuscole e minuscole
+    filter = input.value.toUpperCase();
+
+    // devo prendere tutti gli elementi dell'elenco, quindi prima ottengo l'elenco tramite
+    l'id myUl...
+    ul = document.getElementById("myUL");
+    // ... e poi vado a prendere tutti gli elementi dell'elenco
+    li = ul.getElementsByTagName('li');
+
+    // a questo punto ciclo su tutti gli elementi della lista
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+
+        // se la parola i-esima dell'elenco contiene il valore in input, allora la mostro
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        // altrimenti la nascondo
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+&lt;/script&gt;
+...
+            </code></pre>
+        </div>
+    </div>
 </div>
 
 <footer class="footer">
