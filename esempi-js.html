@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Reference Guide</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- highlight.js for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel ="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Guida base a Bootstrap</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="css-base.html">CSS di base</a></li>
+          <li class="active"><a href="esempi-js.html">Esempi JavaScript<span class="sr-only">(current)</span></a></li>
+          <li><a href="references.html">Riferimenti utili</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Guida base a Bootstrap</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+          <h1>Elementi JS di Bootstrap</h1>
+          <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Carousel</h3>
+            <p>Un carousel &egrave; un componente per realizzare slideshow di immagini.</p>
+            <p>Tipicamente, un carousel contiene immagini e titoli che portano a pagine interne al sito, che sono così messe in evidenza.</p>
+            <p>Puoi vedere le varie opzioni per realizzare un carousel sul sito di Boostrap, all'interno della sezione <a href="https://getbootstrap.com/docs/3.3/javascript/#carousel" title="Carousel in Bootstrap 3">JavaScript</a>.</p>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <pre><code class="html">
+...
+&lt;div id="esempio-carousel-pps" class="carousel slide" data-ride="carousel"&gt;
+  &lt;!-- Indicatori --&gt;
+  &lt;ol class="carousel-indicators"&gt;
+    &lt;li data-target="#esempio-carousel-pps" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+    &lt;li data-target="#esempio-carousel-pps" data-slide-to="1"&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;!-- Wrapper per le singole immagini --&gt;
+  &lt;div class="carousel-inner" role="listbox"&gt;
+    &lt;div class="item active"&gt;
+      &lt;img src="..." alt="..."&gt;
+      &lt;div class="carousel-caption"&gt;
+        &lt;h3&gt;Titolo&lt;/h3&gt;
+        &lt;p&gt;Sottotitolo&lt;p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Le seguenti 7 righe sono un singolo elemento del carousel --&gt;
+    &lt;div class="item"&gt;
+      &lt;img src="..." alt="..."&gt;
+      &lt;div class="carousel-caption"&gt;
+      &lt;h3&gt;Un altro titolo&lt;/h3&gt;
+      &lt;p&gt;Secondo sottotitolo&lt;p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;!-- Controlli --&gt;
+  &lt;a class="left carousel-control" href="#esempio-carousel-pps" role="button" data-slide="prev"&gt;
+    &lt;span class="glyphicon glyphicon-chevron-left" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class="right carousel-control" href="#esempio-carousel-pps" role="button" data-slide="next"&gt;
+    &lt;span class="glyphicon glyphicon-chevron-right" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;span class="sr-only"&gt;Next&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+...
+            </code></pre>
+        </div>
+    </div>
+
+<!-- Carousel -->
+<div id="esempio-carousel-pps" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#esempio-carousel-pps" data-slide-to="0" class="active"></li>
+    <li data-target="#esempio-carousel-pps" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/caffe.jpg" alt="Prima immagine di esempio">
+      <div class="carousel-caption">
+        <h3>Primo titolo</h3>
+        <p>Primo sottotitolo</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/strada.jpg" alt="Seconda immagine di esempio">
+      <div class="carousel-caption">
+        <h3>Secondo titolo</h3>
+        <p>Secondo sottotitolo</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#esempio-carousel-pps" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#esempio-carousel-pps" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Modale</h3>
+            <p>Un modale (o finestra modale) &egrave; un componente che viene utilizzato per mostrare al bisogno informazioni aggiuntive rispetto a quelle presenti nella pagina principale.</p>
+            <p>Un modale si apre "sopra" la pagina, come se fosse una seconda pagina pi&ugrave; piccola a scomparsa. Utilizzi tipici comprendono la comunicazione di dettagli non presenti nella pagina principale o schermate di login/registrazione utenti.</p>
+            <p>Tipicamente, un modale viene aperto/visualizzato dopo aver fatto click su un link o un bottone.</p>
+            <p>Puoi vedere le varie opzioni per realizzare un carousel sul sito di Boostrap, all'interno della sezione <a href="https://getbootstrap.com/docs/3.3/javascript/#modals" title="Modale in Bootstrap 3">JavaScript</a>.</p>
+
+            <!-- Bottone per aprire modale -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mioModale">
+              Apri modale
+            </button>
+
+            <!-- Modale -->
+            <div class="modal fade" id="mioModale" tabindex="-1" role="dialog" aria-labelledby="etichettaModale">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="etichettaModale">Titolo del modale</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Un po' di testo&hellip;</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary">Salva</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <br>
+            <pre><code class="html">
+    ...
+&lt;!-- Bottone per lanciare il modale --&gt;
+&lt;button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mioModale"&gt;
+  Apri il modale
+&lt;/button&gt;
+
+&lt;!-- Modale --&gt;
+&lt;div class="modal fade" id="mioModale" tabindex="-1" role="dialog"&gt;
+  &lt;div class="modal-dialog" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class="modal-title"&gt;Titolo del modale&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;p&gt;Un po' di testo&hellip;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Chiudi&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Salva&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
+  &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
+&lt;/div&gt;&lt;!-- /.modal --&gt;
+
+            </code></pre>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+          <h1>Elementi JS personalizzati</h1>
+          <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Cerca del testo nella pagina</h3>
+            <p>Un semplice metodo, ma non-standard, per cercare ed evidenziare una parola all'interno della pagina corrente.</p>
+            <p>Richiede un campo di ricerca, come nell'esempio sottostante.</p>
+            <p><strong>N.B.</strong> In questo esempio, la ricerca avviene dal campo di ricerca in poi, non viene effettuata all'indietro.</p>
+
+            <!-- Campo di ricerca -->
+            <div>
+              <input type='text' id='search' placeholder='Cerca nella pagina'>
+              <button id="search-button">Cerca</button>
+            </div>
+
+            <script>
+            $(document).ready(function(){
+              $('#search-button').click(function(){
+                var text = $('#search').val();
+
+                strFound=self.find(text);
+              });
+            });
+            </script>
+
+        </div>
+        <div class="col-md-6">
+            <br>
+            <pre><code class="js">
+...
+$(document).ready(function(){
+  $('#search-button').click(function(){
+    var text = $('#search').val();
+    strFound=self.find(text);
+    }
+  });
+});
+...
+            </code></pre>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Realizzato nel 2018 per le classi 4A e 4F del Liceo Scientifico "Galileo Ferraris" di Torino - Progetto PP&S</p>
+  </div>
+</footer>
+
+</body>
+</html>
